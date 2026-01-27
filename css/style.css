@@ -1,56 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Prompt', sans-serif;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: linear-gradient(135deg, #1e3a8a, #38bdf8);
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    background-color: #6600FF;
-    width: 400px;
-    margin: 80px auto;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  max-width: 420px;
+  width: 100%;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  animation: fadeIn 1s ease;
 }
 
 .profile {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #4facfe;
+  margin-bottom: 15px;
 }
 
 h1 {
-    color:#FF33CC;
-    margin-bottom: 5px;
+  margin: 10px 0 5px;
+  color: #333;
 }
 
-h2 {
-    color:#6666CC;
-    font-size: 18px;
-    margin-bottom: 15px;
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-p {
-    color: #334155;
-    font-size: 15px;
-    line-height: 1.6;
+#members {
+  text-align: left;
+  margin: 20px 0;
+}
+
+#members h2 {
+  text-align: center;
+  color: #4facfe;
+}
+
+#members ul {
+  list-style: none;
+  padding: 0;
+}
+
+#members li {
+  background: #f3f8ff;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 25px;
-    background-color: #1e3a8a;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: 0.3s;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: #0f172a;
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
 }
 
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
